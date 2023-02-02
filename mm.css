@@ -1,0 +1,36 @@
+.container{
+    display:block;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 100px auto 100px;
+    height: 100vh;
+    width: 80%;
+    margin: 0 auto;
+}
+col1{
+    background-color: aliceblue;
+    grid-column-start: span 3;
+
+}
+col2{
+    background-color: aqua;
+    grid-column-start: span 1;
+
+}
+col3{
+    background-color: dodgerblue;
+    grid-column-start: span 2;
+}
+col4{
+    background-color: brown;
+    grid-column-start: span 3;
+}
+
+@media (max-width){
+    .container{
+        grid-template-columns: 3fr;
+        grid-template-rows: 100px auto auto 100px;
+    }
+    col1,col2,col3,col4{
+        grid-column-start: span 3;
+    }
+}
